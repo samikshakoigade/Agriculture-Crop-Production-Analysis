@@ -1,0 +1,2656 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20263.26.1022.1645                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='f45e498fcaa3fac61cc68cb29d3b1d6a7636ff3f5cda0ef67498dfbf45e86bba' _.fcp.WorkbookFingerprinting.true...creator-author-id='f45e498fcaa3fac61cc68cb29d3b1d6a7636ff3f5cda0ef67498dfbf45e86bba' _.fcp.WorkbookFingerprinting.true...creator-license-type='free' _.fcp.WorkbookFingerprinting.true...creator-machine-id='9e1f076cf4ef9fd8fb14cae39b2d9c57564c161aae5b10e6451d9981c58f6032' _.fcp.WorkbookFingerprinting.true...license-type='free' _.fcp.WorkbookFingerprinting.true...machine-id='9e1f076cf4ef9fd8fb14cae39b2d9c57564c161aae5b10e6451d9981c58f6032' locale='en_US' original-version='18.1' source-build='2026.3.0 (20263.26.1022.1645)' source-platform='win' version='18.1' xml:base='https://localhost:8080' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <DatagraphCoreV1 />
+    <DatagraphNodeSingleValueFieldV1 />
+    <_.fcp.DynamicColorRange.true...DynamicColorRange />
+    <IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <ParameterAction />
+    <ParameterActionClearSelection />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550?rev=1.1' id='AgricultureStory_17938787189550' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='ColorStart' datatype='real' name='[ColorStart]' param-domain-type='any' role='measure' type='quantitative' value='251709.56170419196'>
+        <calculation class='tableau' formula='251709.56170419196' />
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' inline='true' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='India’s Agricultural Crop Production Analysis(1997-2021)' name='excel-direct.1mjry3y1qovjdu17lc8rg10rbaw7'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Samiksha/Downloads/India’s Agricultural Crop Production Analysis(1997-2021).xlsx' interpretationMode='0' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1mjry3y1qovjdu17lc8rg10rbaw7' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:J10001:no:A1:J10001:0' header='yes' outcome='2'>
+            <column datatype='string' name='State' ordinal='0' />
+            <column datatype='string' name='District' ordinal='1' />
+            <column datatype='string' name='Crop' ordinal='2' />
+            <column datatype='string' name='Year' ordinal='3' />
+            <column datatype='string' name='season' ordinal='4' />
+            <column datatype='real' name='Area' ordinal='5' />
+            <column datatype='string' name='Area Units' ordinal='6' />
+            <column datatype='real' name='Production' ordinal='7' />
+            <column datatype='string' name='Production Units' ordinal='8' />
+            <column datatype='real' name='Production Units 1' ordinal='9' />
+          </columns>
+        </relation>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total crop' datatype='integer' name='[Calculation_0014425159798784]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Crop])' />
+      </column>
+      <column caption='productivity per area' datatype='real' default-format='c!en_US!&quot;$&quot;#,##0.00000;-&quot;$&quot;#,##0.00000' name='[Calculation_0014562544967736]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Production])/SUM([Area])' />
+      </column>
+      <column caption='total crop' datatype='integer' name='[Calculation_0014562546446393]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Crop])' />
+      </column>
+      <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]' role='measure' type='quantitative' />
+      <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+      <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+      <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Samiksha/Downloads/Agriculture Story.twb Files/Data/Extracts/federated_1n0y1jr1fp19fv162c0dt1.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/31/2026 02:53:19 PM' username=''>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>65</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>District</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[District]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>District</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2580</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Crop</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Crop]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Crop</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>78</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19835</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Area Units</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Area Units]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Area Units</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Production</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Production]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Production</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28333</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Production Units</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Production Units]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Production Units</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Production Units 1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Production Units 1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Production Units 1</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>59255</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_A2D7022043DF4A829CC9F52A9E319E41]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:season:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Autumn&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Whole Year&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Summer&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Rabi&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Winter&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Kharif&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Crop:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Castor seed&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Moong(Green Gram)&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Soyabean&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Arecanut&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Horse-gram&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ragi&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Barley&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Linseed&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Safflower&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Cowpea(Lobia)&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Onion&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Tapioca&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Coconut&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Moth&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sugarcane&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Black pepper&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Maize&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sannhamp&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Groundnut&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Peas &amp; beans (Pulses)&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Arhar/Tur&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Jowar&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Rapeseed &amp; Mustard&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ginger&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Other Rabi pulses&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Wheat&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Cardamom&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Masoor&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sesamum&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Dry chillies&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other Cereals&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tobacco&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Dry Ginger&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Other Kharif pulses&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Turmeric&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gram&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Other Summer Pulses&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Guar seed&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Potato&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Coriander&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Niger seed&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Sunflower&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Cashewnut&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mesta&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Small millets&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bajra&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Jute&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rapeseed &amp;Mustard&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Garlic&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;other oilseeds&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Urad&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cotton(lint)&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Oilseeds total&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Sweet potato&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Banana&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Khesari&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Rice&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='State' />
+        <field-sort-custom-order field='District' />
+        <field-sort-custom-order field='Crop' />
+        <field-sort-custom-order field='Calculation_0014425159798784' />
+        <field-sort-custom-order field='Calculation_0014562546446393' />
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='season' />
+        <field-sort-custom-order field='Area' />
+        <field-sort-custom-order field='Area Units' />
+        <field-sort-custom-order field='Production' />
+        <field-sort-custom-order field='Production Units' />
+        <field-sort-custom-order field='Calculation_0014562544967736' />
+        <field-sort-custom-order field='Production Units 1' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_A2D7022043DF4A829CC9F52A9E319E41'>
+            <properties context=''>
+              <relation connection='excel-direct.1mjry3y1qovjdu17lc8rg10rbaw7' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:J10001:no:A1:J10001:0' header='yes' outcome='2'>
+                  <column datatype='string' name='State' ordinal='0' />
+                  <column datatype='string' name='District' ordinal='1' />
+                  <column datatype='string' name='Crop' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='3' />
+                  <column datatype='string' name='season' ordinal='4' />
+                  <column datatype='real' name='Area' ordinal='5' />
+                  <column datatype='string' name='Area Units' ordinal='6' />
+                  <column datatype='real' name='Production' ordinal='7' />
+                  <column datatype='string' name='Production Units' ordinal='8' />
+                  <column datatype='real' name='Production Units 1' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <edit-parameter-action caption='ParameterColorStart1' name='[Action1_72444597779E489A90B81138D0DAEF46]'>
+      <activation type='on-select' />
+      <source type='sheet' worksheet='Agriculture Crop Production' />
+      <agg-type type='min' />
+      <clear-option type='do-nothing' value='i:1' />
+      <params>
+        <param name='source-field' value='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' />
+        <param name='target-parameter' value='[Parameters].[ColorStart]' />
+      </params>
+    </edit-parameter-action>
+  </actions>
+  <worksheets>
+    <worksheet name='Agriculture Crop Production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/AgricultureCropProduction?rev=' id='134812211' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Production Units 1]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Production Units 1]' derivation='Sum' name='[sum:Production Units 1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[Longitude (generated)]' field-type='quantitative' max='12247532.733685661' min='6042707.0673582191' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[Latitude (generated)]' field-type='quantitative' max='3883817.5011367267' min='984538.80635049357' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' min='251709.56170419196' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]' />
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' />
+              <lod column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]' />
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' />
+              <geometry column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</run>
+                <run>&gt;</run>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[Latitude (generated)]</rows>
+        <cols>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{5C578315-E5E8-432E-A517-F99A1C852ED8}' />
+    </worksheet>
+    <worksheet name='Comparison of Crop'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#8cd17d' fontname='Tableau Bold'>Comparison of Crop</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/ComparisonofCrop?rev=' id='134812214' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Area]' derivation='Sum' name='[sum:Area:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]'>
+            <groupfilter count='6' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Area])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Crop:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andaman and Nicobar Islands&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andhra Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Arunachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Assam&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Bihar&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chandigarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chhattisgarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Dadra and Nagar Haveli&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Daman and Diu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Delhi&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Goa&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Gujarat&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Haryana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Himachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jammu and Kashmir&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jharkhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Karnataka&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Kerala&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Ladakh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Madhya Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Maharashtra&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Manipur&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Meghalaya&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Mizoram&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Nagaland&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Odisha&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Puducherry&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Punjab&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Rajasthan&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Sikkim&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tamil Nadu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Telangana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tripura&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttar Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttarakhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;West Bengal&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1997-98&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1998-99&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1999-00&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2000-01&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2001-02&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2002-03&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2003-04&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2004-05&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2005-06&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2006-07&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2007-08&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2008-09&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2009-10&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2010-11&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2011-12&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2012-13&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2013-14&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2014-15&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2015-16&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2016-17&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2017-18&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2018-19&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2019-20&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2020-21&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</rows>
+        <cols>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]</cols>
+      </table>
+      <simple-id uuid='{F9AA9573-FEF2-4E6C-B712-9BC735784AD5}' />
+    </worksheet>
+    <worksheet name='Season agriculture production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#d37295' fontname='Tableau Bold'>Season wise </run>
+            <run fontalignment='1' fontcolor='#d37295' fontname='Tableau Bold'>Agriculture</run>
+            <run fontalignment='1' fontcolor='#d37295' fontname='Tableau Bold'> Production</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Seasonagricultureproduction?rev=' id='134812217' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+            <column-instance column='[Area]' derivation='Sum' name='[sum:Area:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Production]' derivation='Sum' name='[sum:Production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arecanut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arhar/Tur&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Bajra&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Banana&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Barley&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Black pepper&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cardamom&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cashewnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Castor seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coconut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coriander&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cotton(lint)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cowpea(Lobia)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry chillies&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Garlic&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Groundnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Guar seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Horse-gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jowar&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jute&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Khesari&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Linseed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Maize&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Masoor&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Mesta&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moong(Green Gram)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moth&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Niger seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Oilseeds total&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Onion&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Cereals&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Kharif pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;other oilseeds&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Rabi pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Summer Pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Peas &amp; beans (Pulses)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ragi&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp; Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp;Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rice&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Safflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sannhamp&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sesamum&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Small millets&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Soyabean&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sugarcane&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sunflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sweet potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tapioca&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tobacco&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Turmeric&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Urad&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Wheat&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andaman and Nicobar Islands&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andhra Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Arunachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Assam&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Bihar&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chandigarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chhattisgarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Dadra and Nagar Haveli&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Daman and Diu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Delhi&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Goa&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Gujarat&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Haryana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Himachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jammu and Kashmir&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jharkhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Karnataka&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Kerala&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Ladakh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Madhya Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Maharashtra&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Manipur&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Meghalaya&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Mizoram&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Nagaland&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Odisha&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Puducherry&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Punjab&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Rajasthan&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Sikkim&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tamil Nadu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Telangana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tripura&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttar Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttarakhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;West Bengal&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1997-98&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1998-99&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1999-00&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2000-01&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2001-02&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2002-03&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2003-04&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2004-05&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2005-06&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2006-07&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2007-08&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2008-09&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2009-10&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2010-11&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2011-12&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2012-13&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2013-14&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2014-15&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2015-16&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2016-17&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2017-18&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2018-19&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2019-20&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2020-21&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f3ebf3' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' />
+              <size column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+              <wedge-size column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' />
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' />
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0676AB0D-426C-4B14-903A-B0E73FC47806}' />
+    </worksheet>
+    <worksheet name='Season-wise Production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#edc948' fontname='Tableau Light'>Season-wise Production</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Season-wiseProduction?rev=' id='134812212' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+            <column-instance column='[Area]' derivation='Sum' name='[sum:Area:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Production]' derivation='Sum' name='[sum:Production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' direction='DESC' using='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='background-color' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' id='legend-size' value='#ffffff00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' />
+              <wedge-size column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' />
+              <size column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+              <lod column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]' />
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' />
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.0448000431060791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BB425422-1256-4FBB-9B6B-A41D8FCF86C2}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='10'>Total Area</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet11?rev=' id='134812218' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column-instance column='[Area]' derivation='Sum' name='[sum:Area:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#f1ce63' />
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' value='n#,##0,.0000K;-#,##0,.0000K' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' value='n#,##0,.0000K;-#,##0,.0000K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#edc948' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f1ce63' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols total='true' />
+      </table>
+      <simple-id uuid='{4FF5521E-1204-41E4-B988-05B0FCE08ACA}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='10'>Total Production</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet12?rev=' id='134812219' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column-instance column='[Production]' derivation='Sum' name='[sum:Production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' value='n#,##0,.00K;-#,##0,.00K' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' value='n#,##0,.00K;-#,##0,.00K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#d37295' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#d37295' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D3C1D840-022C-456D-A736-D87C5C79D58D}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='10'>Production Unit</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet13?rev=' id='134812220' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Production Units 1]' role='measure' type='quantitative' />
+            <column-instance column='[Production Units 1]' derivation='Sum' name='[sum:Production Units 1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' value='n#,##0,.000000K;-#,##0,.000000K' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' value='n#,##0,.000000K;-#,##0,.000000K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#4e79a7' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+            <format attr='background-color' value='#4e79a7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FE3950A7-6843-4755-BE0D-076F7CD368DD}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='10'>Total Area</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet14?rev=' id='134812222' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column-instance column='[Area]' derivation='Sum' name='[sum:Area:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e15759' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-size' value='10' />
+            <format attr='color' value='#ffffff' />
+            <format attr='background-color' value='#e15759' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Area:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8A3A335B-ED63-4006-A8FD-0F8724B743B9}' />
+    </worksheet>
+    <worksheet name='Sheet 15'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='9'>Production per area</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet15?rev=' id='134812223' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column caption='productivity per area' datatype='real' default-format='c!en_US!&quot;$&quot;#,##0.00000;-&quot;$&quot;#,##0.00000' name='[Calculation_0014562544967736]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Production])/SUM([Area])' />
+            </column>
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0014562544967736]' derivation='User' name='[usr:Calculation_0014562544967736:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014562544967736:qk]' value='n#,##0,.00000000000K;-#,##0,.00000000000K' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014562544967736:qk]' value='n#,##0,.00000000000K;-#,##0,.00000000000K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#76b7b2' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='10' />
+            <format attr='background-color' value='#76b7b2' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014562544967736:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0DF04507-21B1-4C5B-9B1A-1D0D8B291021}' />
+    </worksheet>
+    <worksheet name='Sheet 16'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Crop</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Sheet16?rev=' id='134812224' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column caption='Total crop' datatype='integer' name='[Calculation_0014425159798784]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Crop])' />
+            </column>
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0014425159798784]' derivation='User' name='[usr:Calculation_0014425159798784:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014425159798784:qk]' value='n#,##0,.00000000K;-#,##0,.00000000K' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014425159798784:qk]' value='n#,##0,.00000000K;-#,##0,.00000000K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#b07aa1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='10' />
+            <format attr='background-color' value='#b07aa1' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[usr:Calculation_0014425159798784:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BA563722-F66C-49ED-B1CF-F869C409764E}' />
+    </worksheet>
+    <worksheet name='Top state'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#f28e2b' fontname='Tableau Bold'>Top 7 Crop Production State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Topstate?rev=' id='134812215' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+            <column-instance column='[Production]' derivation='Sum' name='[sum:Production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]'>
+            <groupfilter count='7' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Production])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Crop:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]'>
+            <groupfilter count='7' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Production])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:State:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]'>
+            <groupfilter count='7' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Production])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Autumn&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Kharif&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Rabi&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Summer&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Whole Year&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Winter&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' included-values='in-range-or-null'>
+            <min>19226.919999999998</min>
+            <max>39496639139.150803</max>
+          </filter>
+          <slices>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' num-steps='7' palette='sunrise_sunset_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]</rows>
+        <cols>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</cols>
+      </table>
+      <simple-id uuid='{A9E413ED-E02B-4049-BDD3-9ADCA676FDEE}' />
+    </worksheet>
+    <worksheet name='Trend of Production Unit'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Light'>Trend of Production Unit</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/TrendofProductionUnit?rev=' id='134812213' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='real' name='[Area]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Production Units 1]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Area]' derivation='None' name='[none:Area:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+            <column-instance column='[Production Units 1]' derivation='Sum' name='[sum:Production Units 1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Area:qk]' included-values='in-range'>
+            <min>0.0040000000000000001</min>
+            <max>8580100.0</max>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arecanut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arhar/Tur&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Bajra&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Banana&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Barley&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Black pepper&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cardamom&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cashewnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Castor seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coconut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coriander&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cotton(lint)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cowpea(Lobia)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry chillies&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Garlic&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Groundnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Guar seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Horse-gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jowar&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jute&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Khesari&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Linseed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Maize&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Masoor&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Mesta&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moong(Green Gram)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moth&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Niger seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Oilseeds total&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Onion&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Cereals&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Kharif pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;other oilseeds&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Rabi pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Summer Pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Peas &amp; beans (Pulses)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ragi&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp; Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp;Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rice&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Safflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sannhamp&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sesamum&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Small millets&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Soyabean&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sugarcane&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sunflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sweet potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tapioca&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tobacco&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Turmeric&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Urad&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Wheat&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1997-98&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1998-99&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1999-00&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2000-01&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2001-02&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2002-03&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2003-04&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2004-05&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2005-06&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2006-07&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2007-08&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2008-09&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2009-10&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2010-11&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2011-12&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2012-13&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2013-14&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2014-15&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2015-16&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2016-17&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2017-18&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2018-19&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2019-20&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2020-21&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Autumn&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Kharif&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Rabi&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Summer&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Whole Year&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Winter&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Area:qk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='tooltip'>
+            <format attr='background-color' value='#ebbc14' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <text column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Year:</run>
+                <run fontcolor='#757575'>Æ&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Production Units 1:</run>
+                <run fontcolor='#757575'>Æ&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#f17b79' />
+                <format attr='size' value='0.8059999942779541' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]</rows>
+        <cols>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</cols>
+      </table>
+      <simple-id uuid='{4EA01532-E2B4-4AF8-B4EF-D384349CF5EC}' />
+    </worksheet>
+    <worksheet name='year wise production'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#b07aa1' fontname='Tableau Bold'>Year Wise Crop Production</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/yearwiseproduction?rev=' id='134812216' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (India’s Agricultural Crop Production Analysis(1997-2021))' name='federated.1n0y1jr1fp19fv162c0dt17abkgx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n0y1jr1fp19fv162c0dt17abkgx'>
+            <column datatype='string' name='[Crop]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Production]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Crop]' derivation='None' name='[none:Crop:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[season]' derivation='None' name='[none:season:nk]' pivot='key' type='nominal' />
+            <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+            <column-instance column='[Production]' derivation='Sum' name='[sum:Production:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arecanut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Arhar/Tur&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Bajra&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Banana&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Barley&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Black pepper&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cardamom&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cashewnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Castor seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coconut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Coriander&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cotton(lint)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Cowpea(Lobia)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry chillies&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Dry Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Garlic&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ginger&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Groundnut&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Guar seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Horse-gram&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jowar&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Jute&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Khesari&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Linseed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Maize&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Masoor&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Mesta&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moong(Green Gram)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Moth&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Niger seed&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Oilseeds total&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Onion&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Cereals&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Kharif pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;other oilseeds&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Rabi pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Other Summer Pulses&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Peas &amp; beans (Pulses)&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Ragi&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp; Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rapeseed &amp;Mustard&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Rice&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Safflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sannhamp&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sesamum&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Small millets&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Soyabean&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sugarcane&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sunflower&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Sweet potato&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tapioca&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Tobacco&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Turmeric&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Urad&quot;' />
+              <groupfilter function='member' level='[none:Crop:nk]' member='&quot;Wheat&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andaman and Nicobar Islands&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Andhra Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Arunachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Assam&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Bihar&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chandigarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Chhattisgarh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Dadra and Nagar Haveli&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Daman and Diu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Delhi&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Goa&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Gujarat&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Haryana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Himachal Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jammu and Kashmir&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Jharkhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Karnataka&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Kerala&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Ladakh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Madhya Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Maharashtra&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Manipur&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Meghalaya&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Mizoram&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Nagaland&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Odisha&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Puducherry&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Punjab&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Rajasthan&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Sikkim&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tamil Nadu&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Telangana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tripura&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttar Pradesh&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Uttarakhand&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;West Bengal&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1997-98&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1998-99&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;1999-00&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2000-01&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2001-02&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2002-03&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2003-04&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2004-05&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2005-06&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2006-07&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2007-08&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2008-09&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2009-10&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2010-11&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2011-12&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2012-13&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2013-14&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2014-15&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2015-16&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2016-17&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2017-18&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2018-19&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2019-20&quot;' />
+              <groupfilter function='member' level='[none:Year:nk]' member='&quot;2020-21&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Autumn&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Kharif&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Rabi&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Summer&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Whole Year&quot;' />
+              <groupfilter function='member' level='[none:season:nk]' member='&quot;Winter&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</column>
+            <column>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]</rows>
+        <cols>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</cols>
+      </table>
+      <simple-id uuid='{B5BBFBF2-169F-40A7-8A90-BA9AF71F963E}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Bold'>Agriculture Crop Production Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Dashboard2?rev=' id='134812221' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#a0d1ff' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97222' id='35' param='vert' type-v2='layout-flow' w='98774' x='613' y='1389'>
+            <zone h='7292' id='36' type-v2='title' w='98774' x='613' y='1389'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='89930' id='33' param='vert' type-v2='layout-flow' w='98774' x='613' y='8681'>
+              <zone h='89930' id='27' type-v2='layout-basic' w='98774' x='613' y='8681' />
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='38715' id='1' name='Agriculture Crop Production' w='29857' x='450' y='60590'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='12153' id='6' name='Agriculture Crop Production' pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' type-v2='color' w='10278' x='15229' y='87847' />
+        <zone h='38889' id='7' name='Season-wise Production' w='25206' x='525' y='20660'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='24132' id='10' name='Season-wise Production' pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' type-v2='color' w='6977' x='750' y='34896' />
+        <zone h='39063' id='11' name='Trend of Production Unit' w='28357' x='59040' y='20486'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='38715' id='12' name='Comparison of Crop' w='25656' x='30833' y='60417'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='38021' id='16' name='Top state' w='30308' x='57089' y='60938'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='39063' id='19' name='year wise production' w='32408' x='26257' y='20486'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='160' h='107465' id='13' is-fixed='true' param='vert' type-v2='layout-flow' w='11853' x='87847' y='521'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#f5ead7' />
+          </zone-style>
+        </zone>
+        <zone h='54688' id='20' name='year wise production' pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]' type-v2='color' w='9453' x='89353' y='44271'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f6eee3' />
+          </zone-style>
+        </zone>
+        <zone h='30035' id='15' name='Comparison of Crop' pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]' type-v2='color' w='9119' x='89579' y='1736'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f6eee3' />
+          </zone-style>
+        </zone>
+        <zone h='9375' id='18' name='Top state' pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' type-v2='color' w='11648' x='87969' y='33160'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='8507' id='23' is-centered='0' is-scaled='1' param='C:/Users/Samiksha/Downloads/Agriculture Story.twb Files/Image/green-agriculture-logo-design-template-vector-illustration-png_270631.jpg' type-v2='bitmap' w='11853' x='87922' y='694' />
+        <zone h='9549' id='24' name='Sheet 11' w='8384' x='29209' y='9722'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='9549' id='25' name='Sheet 12' w='8249' x='2975' y='9896'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='9549' id='26' name='Sheet 13' w='8114' x='38742' y='9896'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='7118' id='37' is-scaled='1' param='C:/Users/Samiksha/Downloads/Agriculture Story.twb Files/Image/images.jpg' type-v2='bitmap' w='3676' x='450' y='1736' />
+        <zone h='9375' id='38' name='Sheet 15' w='8249' x='12103' y='9896'>
+          <layout-cache fixed-size-h='73' type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+          </zone-style>
+        </zone>
+        <zone h='9549' id='39' name='Sheet 16' w='6761' x='21366' y='9722'>
+          <layout-cache fixed-size-h='54' type-h='fixed' type-w='fixed' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='7639' id='40' type-v2='text' w='37120' x='48749' y='10938'>
+          <formatted-text>
+            <run bold='true' fontcolor='#ffffff' fontsize='11'>&quot;Rice and wheat maintain the highest volume density, accounting for the majority share of aggregate </run>
+            <run bold='true' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='11'>production.&quot;</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#b4b4b4' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{2E76C054-7C71-4860-8AD3-443F26754612}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <repository-location derived-from='http://localhost:9100/workbooks/AgricultureStory_17938787189550/Story1?rev=' id='134812225' path='/workbooks/AgricultureStory_17938787189550' revision='' />
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='382' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98120' id='1' param='vert' removable='false' type-v2='layout-flow' w='99034' x='483' y='940'>
+            <zone h='4935' id='3' type-v2='title' w='99034' x='483' y='940' />
+            <zone fixed-size='101' h='11868' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='99034' x='483' y='5875' />
+            <zone h='81317' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='99034' x='483' y='17743'>
+              <flipboard active-id='6' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='India Agriculture Production  map based on States                                      find the highest and lowest production values shown on map' captured-sheet='Agriculture Crop Production' id='1' />
+                  <story-point caption='Season-wise Production                                                                                          splits up the data to show what gets harvested during different parts of the year (like summer vs. winter).' captured-sheet='Season-wise Production' id='2' />
+                  <story-point caption='Trends of Production                                                                                                uses charts to show whether farming numbers are going up, going down, or staying the same over time.' captured-sheet='Trend of Production Unit' id='3' />
+                  <story-point caption='Comparison of Crops                                                                                                 compare two or more different crops (like wheat vs. rice) to see which one grew better.' captured-sheet='Comparison of Crop' id='4' />
+                  <story-point caption='Top 7 state in Production                                                                                         simple ranking list showing which states grew the most food and won first place in production.' captured-sheet='Top state' id='5' />
+                  <story-point caption='Year wise Production Data                                                                                       simple ranking list showing which states grew the most food and won first place in production.' captured-sheet='year wise production' id='6' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{C0B057B2-A445-4E59-BC57-EBB910280576}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Agriculture Crop Production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{82A26578-7D52-48F2-AF8F-2C4D160E7ECA}' />
+    </window>
+    <window class='worksheet' name='Season-wise Production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{815FC530-2D32-425E-B98B-628D54FF08E2}' />
+    </window>
+    <window class='worksheet' name='Trend of Production Unit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[:Measure Names]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Production Units:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3B2AE70E-4EDF-4AC1-B843-D1F9385D03F5}' />
+    </window>
+    <window class='worksheet' name='Comparison of Crop'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C968107D-61E1-4E08-B7E3-14504E9A48BB}' />
+    </window>
+    <window class='worksheet' name='Top state'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' type='color' />
+            <card mode='checklist' param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' type='filter' values='database' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{69F00D4E-5342-4265-AE15-A4FF896CF242}' />
+    </window>
+    <window class='worksheet' name='year wise production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6DEBD4FF-A53A-4688-832D-F2139431AAD3}' />
+    </window>
+    <window class='worksheet' name='Season agriculture production'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]' type='color' />
+            <card param='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:State:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{36771E21-AC48-4331-A57A-54FF85B06FB4}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{95835C7D-B5F8-477D-9CFE-B71D216E0CF8}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{893BCED8-905B-4E4C-83A0-8764901A3E46}' />
+    </window>
+    <window class='worksheet' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4038562A-CFA5-4EDA-853E-6E1940A6F34E}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Agriculture Crop Production'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Comparison of Crop'>
+          <highlight>
+            <color-one-way>
+              <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Season-wise Production'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:season:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Sheet 11' />
+        <viewpoint name='Sheet 12' />
+        <viewpoint name='Sheet 13' />
+        <viewpoint name='Sheet 15' />
+        <viewpoint name='Sheet 16' />
+        <viewpoint name='Top state'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trend of Production Unit'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='year wise production'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Year:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B0BCC717-01AC-4875-AA29-0485E278BE87}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Calculation_0014425161687043:qk]</field>
+            <field>[federated.1n0y1jr1fp19fv162c0dt17abkgx].[none:Crop:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0C73EF44-7B30-4B8D-975B-EA3516634E69}' />
+    </window>
+    <window class='worksheet' name='Sheet 15'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{217C60A4-893F-4F16-BB35-6593F2B7E035}' />
+    </window>
+    <window class='worksheet' name='Sheet 16'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D09219FB-A7F4-4B54-9676-834841388365}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='37' />
+      <simple-id uuid='{15BAF7D2-2CED-48AE-8E8A-9B7A8AEBD05F}' />
+    </window>
+  </windows>
+  <datagraph>
+    <graph>
+      <properties>
+        <default-execution-subgraph-guid value='ef7c1983-f35c-4a63-b19e-aadffef6e63d' />
+      </properties>
+      <node-execution-subgraphs>
+        <pair execution-subgraph-guid='ef7c1983-f35c-4a63-b19e-aadffef6e63d' node-guid='2d9b4655-8a3c-4755-8e6d-9dc92a10ef41' />
+        <pair execution-subgraph-guid='ef7c1983-f35c-4a63-b19e-aadffef6e63d' node-guid='66660731-eedc-4a82-b8c4-712612c613e5' />
+      </node-execution-subgraphs>
+      <nodes>
+        <_.fcp.DynamicColorRange.true...quantitative-color-legend-node fieldname='[federated.1n0y1jr1fp19fv162c0dt17abkgx].[sum:Production Units 1:qk]' node-guid='2d9b4655-8a3c-4755-8e6d-9dc92a10ef41' range-input-guid='00a0df4b-e180-4d92-92b3-99d15b16f58f' range-point='start' sheet-identifier='{5C578315-E5E8-432E-A517-F99A1C852ED8}' />
+        <single-value-field-node fieldname='[Parameters].[ColorStart]' fieldname-input-guid='c3166274-b0d4-4cf8-b7b1-b3aff1291182' node-guid='66660731-eedc-4a82-b8c4-712612c613e5' value-output-guid='a686db0a-0231-4858-b3b6-521a63d2a216' />
+      </nodes>
+      <edges>
+        <edge from='a686db0a-0231-4858-b3b6-521a63d2a216' to='00a0df4b-e180-4d92-92b3-99d15b16f58f' />
+      </edges>
+      <pin-values />
+    </graph>
+  </datagraph>
+  <thumbnails>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+      CNXaZAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
